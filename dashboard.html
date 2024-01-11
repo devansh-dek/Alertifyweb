@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <title>Alertify</title>
+</head>
+<body>
+    <body>
+        <div id="map"></div>
+        
+        <div class="sidebar">
+            <div id="logo">
+                <h1>A<span>!</span>ertify</h1>
+            </div>
+            <div class="line"></div>
+            <ul class="main-list">
+                <li class="main-list-item" id="home"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg> Home
+                  <ul class="side-list">
+                    <li class="side-list-item">Overview</li>
+                    <li class="side-list-item">Reports</li>
+                  </ul>
+                </li>
+                <li class="main-list-item" id="fleet"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg> Fleet</li>
+                <li class="main-list-item" id="about"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                  </svg> About</li>
+            </ul>
+        </div>
+
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6nuI3ma_lFaVUanz772HaZo5fdTtQ8lU&callback=initMap&v=weekly"
+          defer
+        ></script>
+        <script src="./js/maps.js"></script>
+      </body>
+</body>
+</html>

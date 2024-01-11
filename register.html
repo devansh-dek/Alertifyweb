@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/register-font.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="form-v10 vsc-initialized">
+    <div class="page-content">
+    <div class="form-v10-content">
+    <form class="form-detail" action="#" method="post" id="myform">
+    <div class="form-left">
+    <h2>General Infomation</h2>
+    <div class="form-row">
+    <select name="title" required>
+    <option class="option" value="title">Organization Type</option>
+    <option class="option" value="ems">EMS</option>
+    <option class="option" value="law">Law Agency</option>
+    <option class="option" value="fire">Fire Station</option>
+    </select>
+    <span class="select-btn">
+    <i class="zmdi zmdi-chevron-down"></i>
+    </span>
+    </div>
+    <div class="form-group">
+    <div class="form-row form-row-1">
+    <input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
+    </div>
+    <div class="form-row form-row-2">
+    <input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
+    </div>
+    </div>
+    <div class="form-row">
+    <select name="position">
+    <option value="position">Position</option>
+    <option value="director">Director</option>
+    <option value="manager">Manager</option>
+    <option value="employee">Employee</option>
+    </select>
+    <span class="select-btn">
+    <i class="zmdi zmdi-chevron-down"></i>
+    </span>
+    </div>
+    <div class="form-row">
+    <input type="text" name="company" class="company" id="company" placeholder="Company" required="">
+    </div>
+    <div class="form-row">
+    <div class="form-row-4">
+    <select name="fleet">
+    <option value="fleet">Fleet Size</option>
+    <option value="0-10">0-10</option>
+    <option value="11-50">11-50</option>
+    <option value="50-100">50-100</option>
+    </select>
+    <span class="select-btn">
+    <i class="zmdi zmdi-chevron-down"></i>
+    </span>
+    </div>
+    </div>
+    </div>
+    <div class="form-right">
+    <h2>Contact Details</h2>
+    <div class="form-row">
+    <input type="text" name="street" class="street" id="street" placeholder="Street + Nr" required>
+    </div>
+    <div class="form-row">
+    <input type="text" name="user" class="additional" id="username" placeholder="Username" required>
+    </div>
+    <div class="form-group">
+    <div class="form-row form-row-1">
+    <input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>
+    </div>
+    <div class="form-row form-row-2">
+    <select name="country">
+    <option value="country">India</option>
+    </select>
+    <span class="select-btn">
+    <i class="zmdi zmdi-chevron-down"></i>
+    </span>
+    </div>
+    </div>
+    <div class="form-row">
+    <input type="password" name="password" class="additional" id="password" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+    <div class="form-row form-row-1">
+    <input type="text" name="code" class="code" id="code" placeholder="Code +" required="">
+    </div>
+    <div class="form-row form-row-2">
+    <input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required="">
+    </div>
+    </div>
+    <div class="form-row">
+    <input type="text" name="your_email" id="your_email" class="input-text" required="" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+    </div>
+    <div class="form-checkbox">
+    <label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
+    <input type="checkbox" name="checkbox">
+    <span class="checkmark"></span>
+    </label>
+    </div>
+    <div class="form-row-last">
+    <input type="submit" name="register" class="register" value="Register">
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    <script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDD6NbvyZN-wgiAkm7idZca5us9wqXDVOE",
+    authDomain: "altertify1.firebaseapp.com",
+    databaseURL: "https://altertify1-default-rtdb.firebaseio.com",
+    projectId: "altertify1",
+    storageBucket: "altertify1.appspot.com",
+    messagingSenderId: "1098867892253",
+    appId: "1:1098867892253:web:c966851d0074a2194766f4"
+  };
+  
+  const app = initializeApp(firebaseConfig);
+
+  import {getDatabase, ref, child, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+  const db = getDatabase();
+
+  var username = document.getElementById("username");
+  var password = document.getElementById("password");
+
+                function AddData(){
+                    update(ref(db, "Vehicles"), {
+                        name: {username: username, password: password}
+                    })
+                    .then(() => {
+                        alert("Successfull");
+                    })
+                    .catch((e) => {
+                        alert("Unsuccessfull");
+                        console.log(e);
+                    })
+                }
+
+                document.querySelector(".register").addEventListener("click",AddData);
+</script>
+    
+    </body>
+</html>
