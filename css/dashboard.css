@@ -1,0 +1,90 @@
+#map {
+    height: 100%;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+.sidebar{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: rgb(3, 15, 27);
+}
+
+.main-list{
+  position: relative;
+  top: 70px;
+  padding-left: 50px;
+  list-style: none;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  width: 110px;
+}
+
+.main-list-item{
+  padding-bottom: 30px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.main-list-item.show svg{
+  transform: rotate(180deg);
+}
+
+#about{
+  padding-top: 50px;
+}
+
+.line{
+  position: relative;
+  top: 210px;
+  height: 1px;
+  width: 70%;
+  margin: 0 30px;
+  background-color: #fff;
+}
+
+.side-list{
+  position: absolute;
+  padding: 10px 0;
+  list-style: none;
+  opacity: 0;
+}
+
+.side-list-item{
+  padding: 5px 0;
+  color: #dad8d8;
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.side-list-item:hover{
+  text-decoration: underline;
+}
+
+#logo h1 {
+  position: relative;
+  top: 20px;
+  left: 50px;
+  font-family:'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 30px; 
+  font-weight: 700;
+  color: #a19e9e;
+  margin-top: 10px;
+}
+
+#logo span {
+  font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+  font-size: 40px; 
+  font-weight: 500;
+  color: rgb(241, 98, 98);
+}
