@@ -6,3 +6,6 @@ We are using html css js firebase and google maps api for webstites
 
 
 In India more than 24,000 people die everyday :( due to delay in emergency services . Our project works on the very same problem.
+
+
+ALSO WE ARE THE WEBSITE DOESNT WORK FULL IT HAS GLITCHES! SORRY FOR INCONVINIENCE.
